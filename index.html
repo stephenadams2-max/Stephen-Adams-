@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen Adams | Commercial Leader & Board Advisor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #2c2c2c;
+            background: white;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c2c2c;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #2c2c2c;
+        }
+
+        /* Header Section */
+        .header {
+            max-width: 900px;
+            margin: 4rem auto 3rem;
+            padding: 0 2rem;
+        }
+
+        .header-intro {
+            font-size: 1.4rem;
+            line-height: 1.7;
+            color: #2c2c2c;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        /* Profile Image */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .quick-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .quick-link {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: #f5f5f5;
+            color: #2c2c2c;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .quick-link:hover {
+            background: #e8e8e8;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .section p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-left: 4px solid #2c2c2c;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-item h3 {
+            font-size: 1.3rem;
+            color: #1a1a1a;
+            margin-bottom: 0.3rem;
+        }
+
+        .experience-meta {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            color: #444;
+        }
+
+        .experience-item li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2c2c2c;
+            font-weight: bold;
+        }
+
+        /* Simple Grid */
+        .simple-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .simple-card {
+            padding: 1.5rem;
+            background: #fafafa;
+            border-radius: 6px;
+            border: 1px solid #e8e8e8;
+        }
+
+        .simple-card h3 {
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin-bottom: 0.8rem;
+        }
+
+        .simple-card p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0;
+        }
+
+        /* Books/Articles */
+        .content-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .content-item:last-child {
+            border-bottom: none;
+        }
+
+        .content-item h3 {
+            font-size: 1.2rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-meta {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-link {
+            color: #2c2c2c;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid #2c2c2c;
+            padding-bottom: 2px;
+            transition: opacity 0.3s;
+        }
+
+        .content-link:hover {
+            opacity: 0.7;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: #2c2c2c;
+            text-decoration: none;
+            border-bottom: 1px solid #2c2c2c;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.7;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.9rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: #2c2c2c;
+            color: white;
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #1a1a1a;
+        }
+
+        /* Footer */
+        footer {
+            background: #fafafa;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: #2c2c2c;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.95rem;
+            transition: opacity 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header-intro {
+                font-size: 1.2rem;
+            }
+
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Stephen Adams</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#press">Press</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="header" id="about">
+        <div class="profile-header">
+            <img src="Stephen_Adams_2025.jpg" alt="Stephen Adams" class="profile-image">
+            <div>
+                <h1>A Career at the Intersection of AI, Telco & SaaS</h1>
+                <div class="quick-links">
+                    <a href="Stephen_Adams_cv.pdf" download class="quick-link">Download CV</a>
+                    <a href="https://www.linkedin.com/in/stephenadams-salesleader" target="_blank" class="quick-link">LinkedIn</a>
+                    <a href="mailto:stephen.adams2@hotmail.co.uk" class="quick-link">Email Me</a>
+                </div>
+            </div>
+        </div>
+
+        <p class="header-intro">
+            Hey there. I'm a commercial leader, investor, and non-executive director who's spent 25+ years scaling businesses from start-ups to enterprises across AI, telco, and SaaS. My track record? Contributing to over £100M in investment, securing multi-million-pound contracts, and helping drive major M&A outcomes including a £12.5B acquisition by BT.
+        </p>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">£100M+</div>
+                <div class="stat-label">Investment Secured</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">£12.5B</div>
+                <div class="stat-label">Largest M&A Deal</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Section -->
+        <section class="section">
+            <h2 class="section-title">What I Do</h2>
+            <p>
+                My superpower? I'm a commercial catalyst who thrives on turning "what if" into "we did it". Whether it's scaling a business from 120 to 500+ staff, negotiating seven-figure enterprise deals, or steering companies through complex M&A transactions, I bring both strategic vision and tactical execution to the table.
+            </p>
+
+            <div class="highlight-box">
+                <h3>My Operating Model</h3>
+                <p>I'm driven by what I call <strong>GROWTH</strong>: Goal-oriented. Results-focused. Opportunity-driven. Winning mindset. Team-first. Human-centred.</p>
+                <p>This combination is about having an achievement mindset and a bias for action whilst also being profoundly self-reflective and tuned in to the people around me. Because at the end of the day, it always comes down to people.</p>
+            </div>
+
+            <p>
+                I'm naturally curious and have a knack for quickly connecting the dots. My roles have always focused on translating business opportunities into scalable strategies that drive efficiency, performance, and revenue growth. I oversee commercial operations, customer acquisition, and strategic partnerships across the continuum of today's business needs.
+            </p>
+
+            <h3 style="font-size: 1.3rem; margin: 2rem 0 1rem; color: #1a1a1a;">Core Competencies</h3>
+            <div class="simple-grid">
+                <div class="simple-card">
+                    <h3>Board Governance</h3>
+                    <p>Strategic leadership and oversight across multiple boards</p>
+                </div>
+                <div class="simple-card">
+                    <h3>Commercial Strategy</h3>
+                    <p>Scaling businesses from start-up to enterprise</p>
+                </div>
+                <div class="simple-card">
+                    <h3>M&A Leadership</h3>
+                    <p>Major transactions totalling £12.5B+</p>
+                </div>
+                <div class="simple-card">
+                    <h3>Capital Raising</h3>
+                    <p>Secured over £100M in investment</p>
+                </div>
+                <div class="simple-card">
+                    <h3>AI & SaaS Scaling</h3>
+                    <p>Global expansion across EU, US, and Australia</p>
+                </div>
+                <div class="simple-card">
+                    <h3>Enterprise Sales</h3>
+                    <p>Award-winning track record, 140% of target</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section" id="experience">
+            <h2 class="section-title">Where I've Worked and What I'm Doing Today</h2>
+            
+            <div class="experience-item">
+                <h3>Commercial Director</h3>
+                <div class="experience-meta">Connex AI | May 2020 - Present | Global</div>
+                <p>
+                    Currently helping drive global expansion at Connex AI, where we've scaled from 120 to 500+ staff and opened new markets across Europe, the US, and Australia. I contributed to securing over £100M in investment and continue to close multi-million-pound enterprise contracts.
+                </p>
+                <p><strong>The highlights:</strong></p>
+                <ul>
+                    <li>Delivered 140% of annual target in just 3 months after returning from major surgery</li>
+                    <li>Secured Enterprise Deal of the Year three consecutive years (2020-2022)</li>
+                    <li>Built high-performing sales teams achieving consistent double-digit growth</li>
+                    <li>Led strategic adoption of AI-powered customer engagement solutions for enterprise clients</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Non-Executive Director & Investor</h3>
+                <div class="experience-meta">Multiple Businesses | Jan 2000 - Present | UK</div>
+                <p>
+                    Active investor and NED across established companies and start-ups, advising boards on sales strategy, market expansion, and operational improvement. I leverage my network and experience to accelerate commercial growth whilst providing governance and performance oversight.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Founder & Director</h3>
+                <div class="experience-meta">Adams Property Ltd | May 1999 - Present | UK</div>
+                <p>
+                    Founded and manage a property investment and development company specialising in residential and commercial assets. Over two decades, I've managed transactions from £50K residential flips to multi-million-pound commercial deals, integrating property assets with wider business portfolio to maximise ROI.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Commercial Director</h3>
+                <div class="experience-meta">Noble Systems | Feb 2016 - May 2019 | UK</div>
+                <p>
+                    Led UK commercial operations prior to the merger with Aspect Software. Increased UK annual profits to £8M+ through strategic sales and operational optimisation whilst expanding the enterprise customer base in competitive contact centre technology markets.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Sales Director</h3>
+                <div class="experience-meta">EE (BT Group) | May 2007 - May 2016 | UK</div>
+                <p>
+                    Senior Leadership Team member during the merger of T-Mobile and Orange to form EE, which was later acquired by BT for £12.5B. Led commercial operations during one of the UK's largest telecom mergers and played a strategic role in integration planning for the BT acquisition.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Director</h3>
+                <div class="experience-meta">DX Communications | Jul 1997 - May 2007 | UK</div>
+                <p>
+                    Founding team member who built the Retail division from the ground up. Scaled the national retail network, driving substantial revenue growth, and achieved a £50M buyout by BT Cellnet.
+                </p>
+            </div>
+        </section>
+
+        <!-- Books Section -->
+        <section class="section" id="books">
+            <h2 class="section-title">Published Works</h2>
+            
+            <div class="content-item">
+                <h3>STEPHEN ADAMS SALES SYSTEM™ CORE PLAYBOOK</h3>
+                <div class="content-meta">Business & Sales</div>
+                <p>
+                    My proven 8-step sales framework that I've used to close multi-million-pound B2B deals throughout my career. This comprehensive guide is for sales professionals looking to scale their performance and drive consistent results in enterprise markets. It's the culmination of 25+ years of field-tested strategies, real-world scenarios, and hard-won lessons.
+                </p>
+                <a href="#" class="content-link">View on Amazon →</a>
+            </div>
+
+            <div class="content-item">
+                <h3>Kidney for Lily</h3>
+                <div class="content-meta">Memoir & Health</div>
+                <p>
+                    A personal memoir and practical guide supporting families facing chronic kidney disease. This book combines our family's journey with actionable advice for navigating medical challenges and maintaining hope through difficult times. It's about the power of human connection and resilience when facing life's toughest challenges.
+                </p>
+                <a href="#" class="content-link">View on Amazon →</a>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section class="section" id="articles">
+            <h2 class="section-title">Articles & Insights</h2>
+            
+            <div class="content-item">
+                <h3>Scaling AI-Powered Solutions in Enterprise Markets</h3>
+                <div class="content-meta">October 2024</div>
+                <p>
+                    Exploring the key strategies for successfully implementing AI solutions in large enterprise environments, from stakeholder buy-in to measurable ROI. Drawing from our experience at Connex AI scaling across global markets.
+                </p>
+                <a href="#" class="content-link">Read more →</a>
+            </div>
+
+            <div class="content-item">
+                <h3>The Future of B2B SaaS: Lessons from 25 Years in Tech</h3>
+                <div class="content-meta">August 2024</div>
+                <p>
+                    Drawing on decades of experience across major tech transformations, this article examines where the SaaS industry is heading and how businesses can prepare for the next wave of innovation.
+                </p>
+                <a href="#" class="content-link">Read more →</a>
+            </div>
+
+            <div class="content-item">
+                <h3>Building High-Performance Sales Teams in a Hybrid World</h3>
+                <div class="content-meta">June 2024</div>
+                <p>
+                    Practical strategies for recruiting, training, and managing sales teams that consistently exceed targets in the post-pandemic business landscape. Based on building teams that delivered 140%+ of target.
+                </p>
+                <a href="#" class="content-link">Read more →</a>
+            </div>
+
+            <div class="content-item">
+                <h3>M&A in Tech: What I Learned from £12.5B Worth of Deals</h3>
+                <div class="content-meta">March 2024</div>
+                <p>
+                    Insights from navigating some of the UK's largest technology mergers and acquisitions, including practical advice for business leaders facing integration challenges.
+                </p>
+                <a href="#" class="content-link">Read more →</a>
+            </div>
+        </section>
+
+        <!-- Press Section -->
+        <section class="section" id="press">
+            <h2 class="section-title">Press & Speaking</h2>
+            
+            <div class="content-item">
+                <h3>Keynote Speaker: AI & Enterprise Transformation Summit 2024</h3>
+                <div class="content-meta">Tech Leaders UK | September 2024</div>
+                <p>
+                    Delivered keynote presentation on scaling AI solutions across global enterprise markets, sharing insights from Connex AI's international expansion journey and the key success factors for enterprise adoption.
+                </p>
+            </div>
+
+            <div class="content-item">
+                <h3>Interview: The Sales Leadership Podcast</h3>
+                <div class="content-meta">Sales Excellence Network | July 2024</div>
+                <p>
+                    In-depth discussion on the STEPHEN ADAMS SALES SYSTEM™ and building world-class sales organisations in competitive markets. We explored what it really takes to consistently deliver results.
+                </p>
+            </div>
+
+            <div class="content-item">
+                <h3>Feature: Raising Capital in Competitive Markets</h3>
+                <div class="content-meta">UK Business Magazine | May 2024</div>
+                <p>
+                    Featured article discussing strategies for securing investment and the journey to £100M+ in capital raising. Practical insights for founders and commercial leaders looking to scale.
+                </p>
+            </div>
+
+            <div class="content-item">
+                <h3>Ambassador Announcement: World Kidney Day 2024</h3>
+                <div class="content-meta">World Kidney Day | March 2024</div>
+                <p>
+                    Announced as Ambassador for World Kidney Day, campaigning for kidney health awareness and early detection. This cause is deeply personal to me and my family.
+                </p>
+            </div>
+        </section>
+
+        <!-- Volunteering -->
+        <section class="section">
+            <h2 class="section-title">Giving Back</h2>
+            <p>
+                Tactical job stuff aside, being a good human is in my personal and professional remit. I take volunteering and advocacy seriously because I've been fortunate in my career and believe in using that privilege to help others.
+            </p>
+            
+            <div class="simple-grid">
+                <div class="simple-card">
+                    <h3>Ambassador, World Kidney Day</h3>
+                    <p>2024 - Present | Campaigning for kidney health awareness and early detection</p>
+                </div>
+                <div class="simple-card">
+                    <h3>Panel Member, Children's Hearings Scotland</h3>
+                    <p>2024 - Present | Supporting vulnerable children and families through decision-making in legal hearings</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>
+                Whether you're looking for a board advisor, considering investment opportunities, or just want to have a conversation about scaling businesses in AI and SaaS, I'd love to hear from you.
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.2rem;">Contact Information</h3>
+                    <p><strong>Email:</strong> <a href="mailto:stephen.adams2@hotmail.co.uk">stephen.adams2@hotmail.co.uk</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:07961585824">07961 585824</a></p>
+                    <p><strong>Location:</strong> Newton Mearns, Scotland, UK</p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/stephenadams-salesleader" target="_blank">Connect with me</a></p>
+                </div>
+
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Stephen Adams. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">MBA | Author | Investor | NED</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/stephenadams-salesleader" target="_blank">LinkedIn</a>
+            <a href="mailto:stephen.adams2@hotmail.co.uk">Email</a>
+            <a href="Stephen_Adams_cv.pdf" download>Download CV</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! This form needs to be connected to an email service. For now, please email directly at stephen.adams2@hotmail.co.uk');
+        });
+    </script>
+</body>
+</html>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">STEPHEN ADAMS</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#press">Press</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>STEPHEN ADAMS</h1>
+            <p class="tagline">NED & Investor | AI, Telco & SaaS Growth Leader | Commercial Director</p>
+            <p style="font-size: 1.1rem; color: #ddd; max-width: 700px; margin: 0 auto;">25+ years' experience driving growth in AI, telco, and SaaS sectors. Proven track record contributing to over £100M in investment and delivering major M&A outcomes.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">£100M+</div>
+                    <div class="stat-label">Investment Secured</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">£12.5B</div>
+                    <div class="stat-label">Largest M&A Deal</div>
+                </div>
+            </div>
+
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <div class="container">
+        <section class="section" id="profile">
+            <h2 class="section-title">Profile</h2>
+            <div class="profile-grid">
+                <div>
+                    <img src="Stephen_Adams_2025.jpg" alt="Stephen Adams" class="profile-image">
+                    <a href="Stephen_Adams_cv.pdf" download class="download-cv" style="display: block; text-align: center;">Download CV</a>
+                </div>
+                <div class="profile-details">
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.8;">
+                        Non-Executive Director, investor, and commercial leader with 25+ years' experience driving growth in AI, telco, and SaaS sectors. Proven track record of contributing to over £100M in investment, securing multi-million-pound contracts, and scaling businesses internationally across Europe, the US, and Australia.
+                    </p>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.8;">
+                        Career includes senior roles at Connex AI, EE, Noble Systems, and DX Communications, delivering major M&A outcomes, including a £50M acquisition by BT Cellnet and a £12.5B acquisition by BT. MBA-qualified, award-winning author of the STEPHEN ADAMS SALES SYSTEM™ CORE PLAYBOOK, keynote speaker, and active board advisor to start-ups and established businesses.
+                    </p>
+
+                    <h3>Location</h3>
+                    <ul>
+                        <li>Newton Mearns, Scotland, UK</li>
+                    </ul>
+
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="mailto:stephen.adams2@hotmail.co.uk">stephen.adams2@hotmail.co.uk</a></li>
+                        <li><a href="tel:07961585824">07961 585824</a></li>
+                        <li><a href="https://www.linkedin.com/in/stephenadams-salesleader" target="_blank">LinkedIn Profile</a></li>
+                    </ul>
+
+                    <h3>Education</h3>
+                    <ul>
+                        <li><strong>MBA</strong> - Business/Corporate Communications<br>Strathclyde Business School (2008-2011)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Competencies -->
+        <section class="section">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h3>Board Governance & Oversight</h3>
+                    <p>Strategic leadership and governance expertise across multiple boards, driving accountability and performance.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>Commercial Strategy & Growth</h3>
+                    <p>Proven track record scaling businesses from start-up to enterprise level across multiple markets.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>Mergers & Acquisitions</h3>
+                    <p>Led and contributed to major M&A transactions totalling over £12.5B in value.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>Capital Raising</h3>
+                    <p>Secured over £100M in investment for growth-stage and enterprise businesses.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>SaaS & AI Scaling</h3>
+                    <p>Deep expertise in scaling AI and SaaS businesses across global markets.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>Enterprise Sales Leadership</h3>
+                    <p>Award-winning sales leader with consistent track record of exceeding targets and building high-performing teams.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>International Expansion</h3>
+                    <p>Successfully opened and scaled operations across Europe, US, and Australia.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>Strategic Partnerships</h3>
+                    <p>Negotiated and closed multi-million-pound contracts with enterprise clients globally.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section class="section" id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Commercial Director</h3>
+                    <div class="company">Connex AI</div>
+                    <div class="date">May 2020 - Present | UK / Global</div>
+                    <p>Helped drive global expansion from 120 to 500+ staff, opened new markets in Europe, US, and Australia, and contributed to securing over £100M in investment.</p>
+                    <ul>
+                        <li>Delivered 140% of annual target in just 3 months after returning from major surgery</li>
+                        <li>Closed multiple seven-figure enterprise contracts across telco, SaaS, and B2B sectors</li>
+                        <li>Secured Enterprise Deal of the Year three consecutive years (2020-2022)</li>
+                        <li>Built high-performing sales teams, achieving consistent double-digit growth</li>
+                        <li>Led strategic adoption of AI-powered customer engagement solutions for enterprise clients</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Non-Executive Director & Investor</h3>
+                    <div class="company">Multiple Businesses</div>
+                    <div class="date">Jan 2000 - Present | UK</div>
+                    <p>Active investor and NED across established companies and start-ups.</p>
+                    <ul>
+                        <li>Advising boards on sales strategy, market expansion, and operational improvement</li>
+                        <li>Providing governance, performance oversight, and market execution expertise</li>
+                        <li>Leveraging network and experience to accelerate commercial growth</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Founder & Director</h3>
+                    <div class="company">Adams Property Ltd</div>
+                    <div class="date">May 1999 - Present | UK</div>
+                    <p>Founded and manage a property investment and development company specialising in residential and commercial assets.</p>
+                    <ul>
+                        <li>Delivered consistent portfolio growth for over two decades</li>
+                        <li>Managed transactions from £50K residential flips to multi-million-pound commercial deals</li>
+                        <li>Integrated property assets with wider business portfolio to maximise ROI</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Commercial Director</h3>
+                    <div class="company">Noble Systems</div>
+                    <div class="date">Feb 2016 - May 2019 | UK</div>
+                    <p>Led UK commercial operations prior to merger with Aspect Software.</p>
+                    <ul>
+                        <li>Increased UK annual profits to £8M+ through strategic sales and operational optimisation</li>
+                        <li>Expanded enterprise customer base in competitive contact centre technology markets</li>
+                        <li>Strengthened market position ahead of successful merger and integration</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Sales Director</h3>
+                    <div class="company">EE (BT Group)</div>
+                    <div class="date">May 2007 - May 2016 | UK</div>
+                    <p>Senior Leadership Team member during the merger of T-Mobile and Orange to form EE, later acquired by BT for £12.5B.</p>
+                    <ul>
+                        <li>Led commercial operations during one of the UK's largest telecom mergers</li>
+                        <li>Oversaw brand transition to EE, ensuring seamless customer experience</li>
+                        <li>Played a strategic role in integration planning for the BT acquisition</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Director</h3>
+                    <div class="company">DX Communications</div>
+                    <div class="date">Jul 1997 - May 2007 | UK</div>
+                    <p>Founding team member who built the Retail division from the ground up.</p>
+                    <ul>
+                        <li>Scaled national retail network, driving substantial revenue growth</li>
+                        <li>Achieved £50M buyout by BT Cellnet</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Books Section -->
+        <section class="section" id="books">
+            <h2 class="section-title">Published Works</h2>
+            <div class="books-grid">
+                <div class="book-card">
+                    <h3>STEPHEN ADAMS SALES SYSTEM™ CORE PLAYBOOK</h3>
+                    <p>Proven 8-step sales framework used to close multi-million-pound B2B deals. A comprehensive guide for sales professionals looking to scale their performance and drive consistent results.</p>
+                    <a href="#" class="book-link">View on Amazon</a>
+                </div>
+                <div class="book-card">
+                    <h3>Kidney for Lily</h3>
+                    <p>Memoir and practical guide supporting families facing chronic kidney disease. A personal journey combined with actionable advice for navigating medical challenges and family support.</p>
+                    <a href="#" class="book-link">View on Amazon</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles/Blog Section -->
+        <section class="section" id="articles">
+            <h2 class="section-title">Articles & Insights</h2>
+            
+            <div class="article-card">
+                <h3>Scaling AI-Powered Solutions in Enterprise Markets</h3>
+                <div class="article-date">October 2024</div>
+                <p>Exploring the key strategies for successfully implementing AI solutions in large enterprise environments, from stakeholder buy-in to measurable ROI.</p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+
+            <div class="article-card">
+                <h3>The Future of B2B SaaS: Lessons from 25 Years in Tech</h3>
+                <div class="article-date">August 2024</div>
+                <p>Drawing on decades of experience across major tech transformations, this article examines where the SaaS industry is heading and how businesses can prepare.</p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+
+            <div class="article-card">
+                <h3>Building High-Performance Sales Teams in a Hybrid World</h3>
+                <div class="article-date">June 2024</div>
+                <p>Practical strategies for recruiting, training, and managing sales teams that consistently exceed targets in the post-pandemic business landscape.</p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+
+            <div class="article-card">
+                <h3>M&A in Tech: What I Learned from £12.5B Worth of Deals</h3>
+                <div class="article-date">March 2024</div>
+                <p>Insights from navigating some of the UK's largest technology mergers and acquisitions, including practical advice for business leaders.</p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+        </section>
+
+        <!-- Press & Interviews -->
+        <section class="section" id="press">
+            <h2 class="section-title">Press & Interviews</h2>
+            
+            <div class="press-item">
+                <h3>Keynote Speaker: AI & Enterprise Transformation Summit 2024</h3>
+                <div class="source">Tech Leaders UK | September 2024</div>
+                <p>Delivered keynote presentation on scaling AI solutions across global enterprise markets, sharing insights from Connex AI's international expansion.</p>
+            </div>
+
+            <div class="press-item">
+                <h3>Interview: The Sales Leadership Podcast</h3>
+                <div class="source">Sales Excellence Network | July 2024</div>
+                <p>In-depth discussion on the STEPHEN ADAMS SALES SYSTEM™ and building world-class sales organisations in competitive markets.</p>
+            </div>
+
+            <div class="press-item">
+                <h3>Feature: Raising Capital in Competitive Markets</h3>
+                <div class="source">UK Business Magazine | May 2024</div>
+                <p>Featured article discussing strategies for securing investment and the journey to £100M+ in capital raising.</p>
+            </div>
+
+            <div class="press-item">
+                <h3>Ambassador Announcement: World Kidney Day 2024</h3>
+                <div class="source">World Kidney Day | March 2024</div>
+                <p>Announced as Ambassador for World Kidney Day, campaigning for kidney health awareness and early detection.</p>
+            </div>
+
+            <div class="press-item">
+                <h3>Panel Discussion: The Future of Telco & AI Integration</h3>
+                <div class="source">Mobile World Congress | February 2024</div>
+                <p>Participated in expert panel discussing the convergence of telecommunications and artificial intelligence technologies.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        <a href="mailto:stephen.adams2@hotmail.co.uk">stephen.adams2@hotmail.co.uk</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone</strong>
+                        <a href="tel:07961585824">07961 585824</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location</strong>
+                        Newton Mearns, Scotland, UK
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn</strong>
+                        <a href="https://www.linkedin.com/in/stephenadams-salesleader" target="_blank">Connect on LinkedIn</a>
+                    </div>
+
+                    <h3 style="margin-top: 2rem;">Volunteering & Advocacy</h3>
+                    <div class="contact-item">
+                        <strong>Ambassador</strong>
+                        World Kidney Day (2024 - Present)<br>
+                        <em>Campaigning for kidney health awareness and early detection</em>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Panel Member</strong>
+                        Children's Hearings Scotland (2024 - Present)<br>
+                        <em>Supporting vulnerable children and families</em>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form action="#" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Stephen Adams. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/stephenadams-salesleader" target="_blank">LinkedIn</a>
+            <a href="mailto:stephen.adams2@hotmail.co.uk">Email</a>
+            <a href="tel:07961585824">Phone</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler (you'll need to connect this to your email service)
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! This form needs to be connected to an email service. For now, please email directly at stephen.adams2@hotmail.co.uk');
+        });
+    </script>
+</body>
+</html>
