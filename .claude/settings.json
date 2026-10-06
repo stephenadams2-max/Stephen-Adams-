@@ -1,0 +1,6 @@
+{
+  "enabledPlugins": {
+    "nano-banana@ibrahim-plugins": true,
+    "nano-banana@claude-code-nano-banana": true
+  }
+}
